@@ -95,5 +95,8 @@
             <path
                 d="M32 3.223 28.777 0 16 12.777 3.223 0 0 3.223 12.777 16 0 28.777 3.223 32 16 19.223 28.777 32 32 28.777 19.223 16 32 3.223z" />
         </symbol>
+        <symbol id="icon-paperplane" viewBox="0 0 32 32">
+            <path fill="#fff" style="fill:var(--color1, #fff)" d="M32 0 0 18l10 4L26 7 14 23v9l6-7 7 3 5-28z" />
+
     </defs>
 </svg>

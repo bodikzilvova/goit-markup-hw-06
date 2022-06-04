@@ -60,6 +60,43 @@
   <use href="./images/icons/symbol-defs.svg#icon-Vector"></use>
 </svg>
 </button>
+
+<h3 class="modal-title" >Оставьте свои данные, мы вам перезвоним</h3>
+
+<form class="form" autocomplete="off">
+  <div class="form-field">  
+    <label class="form-text" for="name">Имя</label>
+<input type="text" name="name">
+</div>
+
+
+  <div class="form-field">
+    <label class="form-text" for="tel">Телефон</label>
+<input type="tel" name="tel" id="tel">
+</div>
+
+
+  <div class="form-field">
+    <label class="form-text" for="mail">Почта</label>
+<input type="email" name="mail" id="mail">
+</div>
+
+
+  <div class="form-field">
+    <label class="form-text" for="comments">Коментарий</label>
+<textarea name="comments" id="comments" placeholder="Введите текст"></textarea>
+</div>
+
+
+  <div class="agreement-checkbox"><input type="checkbox" name="agreement" id="agreement">
+<label for="agreement">Соглашаюсь с рассылкой и принимаю <a class="agreement-link" href="">Условия договора</a></label></div>
+
+
+<button class="btn-send" type="submit">Отправить</button>
+
+
+
+</form>
 </div>
           </div>
         
@@ -288,8 +325,20 @@
           </div>
           </ul>
         </address>
+         <div class="footer-mailing">
+      <form>
+<h3 class="text-mailing">ПОДПИШИТЕСЬ НА РАССИЛКУ
+</h3>
+
+  <input class="form-mailing" type="text" name="mailing" id="mailing" placeholder="E-mail">
+</form>
+       <button class="btn-mailing" type="submit">Подписаться<svg class="icon-send"><use href="./images/icons/symbol-defs.svg#icon-paperplane"></use> 
+      </svg></button>
+       </div>
+       
       </div>
-      <!-- <h3 class="connect">ПОДПИШИТЕСЬ НА РАССИЛКУ</h3> -->
+
+ 
     </footer>
     <script src="./js/modal.js"></script>
   </body>
