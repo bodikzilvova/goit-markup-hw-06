@@ -322,18 +322,33 @@ height: 11px;
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
+    position: relative;
+  
+    
 }    
 
 .form-field label{
     margin-bottom: 4px;
 }
 
-.form-field input{
+.input-form{
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     width: 448px;
     height: 40px;
+    padding-left: 42px;
+    outline: transparent;
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.input-form:hover,
+.input-form:focus{
+    border-color: var(--blue-color);
+}
+.input-form:hover ~ .icons-form,
+.input-form:focus ~ .icons-form{
+    fill: var(--blue-color);
+}
+
 
 .form-field textarea::placeholder{
     color: rgba(117, 117, 117, 0.5);
@@ -342,9 +357,14 @@ height: 11px;
         line-height: 1.14;
         letter-spacing: 0.01em;
 }
+.form-field textarea:hover,
+.form-field textarea:hover{
+border-color: var(--blue-color);
+}
 
 textarea{
     resize: none;
+    outline: transparent
 }
 
 .form-field textarea{
@@ -353,8 +373,22 @@ textarea{
     padding: 12px 16px;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
-
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
+
+
+.icons-form{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    display: inline-block;
+transform: translateY(10%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 18px;
+    height: 18px;
+}
+
+
 
 .agreement-checkbox{
         font-weight: 400;
@@ -371,6 +405,25 @@ textarea{
 .agreement-checkbox input{
     margin-right: 7px;
     
+}
+.checkbox{
+    appearance: none;
+}
+.agreement-text::before{
+    content: " ";
+    width: 16px;
+    height: 15px;
+    display: inline-block;
+    border: 2px solid var(--main-color);
+    border-radius: 3px;
+    margin-right: 8px;
+}
+.checkbox:checked + .agreement-text::before{
+    background-color: var(--blue-color);
+    background-image: url(../images/icons/for\ new\ icons/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border-color: var(--blue-color);
 }
 
 .agreement-link{
@@ -407,6 +460,8 @@ height: 15px;
         align-items: center;
 
 }
+
+
 
 
 .benefits-item {
@@ -611,7 +666,6 @@ height: 70px;
 }
 .clients-link:hover,
 .clients-link:focus{
-   
     border-color: var(--blue-color);
 }
 .clients-link:hover .clients-icons,
