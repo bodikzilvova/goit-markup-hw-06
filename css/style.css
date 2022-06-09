@@ -273,7 +273,6 @@ position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 528px;
-    height: 581px;
     padding: 43px 40px 37px 40px;
     background-color: var(--white-color);
     border-radius: 4px;
@@ -323,9 +322,8 @@ height: 11px;
     display: flex;
     flex-direction: column;
     position: relative;
-  
-    
 }    
+
 
 .form-field label{
     margin-bottom: 4px;
@@ -343,6 +341,7 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-be
 .input-form:hover,
 .input-form:focus{
     border-color: var(--blue-color);
+    
 }
 .input-form:hover ~ .icons-form,
 .input-form:focus ~ .icons-form{
@@ -373,7 +372,8 @@ textarea{
     padding: 12px 16px;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 20px;
 }
 
 
@@ -407,8 +407,15 @@ transform: translateY(10%);
     
 }
 .checkbox{
+    position: absolute;
     appearance: none;
 }
+
+.agreement-text{
+    display: flex;
+    align-items: center;
+}
+
 .agreement-text::before{
     content: " ";
     width: 16px;
@@ -418,6 +425,7 @@ transform: translateY(10%);
     border-radius: 3px;
     margin-right: 8px;
 }
+
 .checkbox:checked + .agreement-text::before{
     background-color: var(--blue-color);
     background-image: url(../images/icons/for\ new\ icons/icon-check.svg);
@@ -435,10 +443,6 @@ color: var(--blue-color);
     text-decoration-line: underline;
 }
 
-.agreement-checkbox input[type="checkbox"]{
-width: 16px;
-height: 15px;
-}
 
 .btn-send{
     width: 200px;
@@ -464,19 +468,19 @@ height: 15px;
 
 
 
-.benefits-item {
+.benefits__item {
     display: flex;
 }
 
-.benefits-contents {
+.benefits__contents {
     margin-right: 30px;
 }
 
-.benefits-contents:last-child {
+.benefits__contents:last-child {
     margin-right: 0px;
 }
 
-.benefits-title {
+.benefits__title {
     color: var(--main-color);
     margin-bottom: 10px;
     font-weight: 700;
@@ -486,12 +490,12 @@ height: 15px;
     text-transform: uppercase;
 }
 
-.benefits-text {
+.benefits__text {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
 }
-.benefits-icons{
+.benefits__icons{
 background-color: var(--button-color);
 height: 120px;
 width: 270px;
@@ -502,16 +506,16 @@ align-items: center;
 justify-content: center;
 
 }
-.benefits-icon{
+.benefits__icon{
     width: 70px;
 height: 70px;
 }
 
-.occupation-section{
+.occupation{
     padding-top: 0;
 
 }
-.occupation {
+.occupation__title {
     color: var(--main-color);
     margin-bottom: 50px;
 
@@ -522,20 +526,20 @@ height: 70px;
     letter-spacing: 0.03em;
 }
 
-.occupation-item {
+.occupation__item {
     display: flex;
 }
 
-.occupation-thumb {
+.occupation__thumb {
     position: relative;
     margin-right: 30px;
 }
 
-.occupation-thumb:last-child {
+.occupation__thumb:last-child {
     margin-right: 0px;
 }
 
-.occupation-text{
+.occupation__text{
     color: var(--white-color);
     display: flex;
    justify-content: center;
@@ -642,7 +646,7 @@ height: 70px;
     height: 20px;
     fill: #AFB1B8    ;
 }
-.clients-title{
+.clients__title{
     color: var(--main-color);
     margin-bottom: 50px;
 
@@ -652,28 +656,30 @@ height: 70px;
     text-align: center;
     letter-spacing: 0.03em;
 }
-.clients-list{
+.clients__list{
     display: flex;
 }
-.clients-item{
+.clients__item{
     width: 100%;
     height: 100%;
     margin-right: 30px;
     
 }
-.clients-item:last-child{
+.clients__item:last-child{
     margin-right: 0px;
 }
-.clients-link:hover,
-.clients-link:focus{
+.clients__link:hover{
     border-color: var(--blue-color);
 }
-.clients-link:hover .clients-icons,
-.clients-link:focus .clients-icons{
+.clients__link:focus{
+    border-color: var(--blue-color);
+}
+.clients__link:hover .clients__icons,
+.clients__link:focus .clients__icons{
     
     fill: var(--blue-color);
 }
-.clients-link{
+.clients__link{
 display: flex;
 border: solid 1px #AFB1B8;
     justify-content: center;
@@ -685,7 +691,7 @@ border: solid 1px #AFB1B8;
         transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-icons{
+.clients__icons{
     fill: #AFB1B8;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -839,7 +845,7 @@ background-color: var(--blue-color);
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
