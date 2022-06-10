@@ -176,12 +176,14 @@ textarea {
 
 &:checked+.agreement-text::before {
         background-color: var(--blue-color);
-        background-image: url(../../images/icons/for/new/icons/icon-check.svg);
+        background-image: url(/images/icons/icon-check.svg);
         background-size: contain;
         background-origin: border-box;
         border-color: var(--blue-color);
     }
 }
+
+
 
 .agreement-text {
     display: flex;
@@ -195,6 +197,7 @@ textarea {
             border: 2px solid var(--main-color);
             border-radius: 3px;
             margin-right: 7px;
+      
         }
 }
 
